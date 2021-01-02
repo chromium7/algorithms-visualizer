@@ -1,0 +1,75 @@
+// Set up fonts
+@font-face {
+  font-family: "Montserrat";
+  src: url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.eot");
+  // IE9
+  src: url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.woff2")
+      format("woff2"),
+    /* chrome、firefox */
+      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.woff")
+      format("woff"),
+    /* chrome、firefox */
+      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.svg#Montserrat")
+      format("svg");
+  /* iOS 4.1- */
+}
+
+// Set up CSS Variable
+$vars: (
+  light-primary: #d8f3dc,
+  light-secondary: #b7e4c7,
+  light-tertiary: #95b5d2,
+  green-primary: #52b788,
+  green-secondary: #74c69d,
+  green-tertiary: #40916c,
+  dark-primary: #1b4332,
+  dark-secondary: #2d6a4f,
+  dark-tertiary: #081c15,
+  dark-black: #262727,
+  red-primary: #d34e4e,
+);
+
+@function v($key) {
+  @return map-get($vars, $key);
+}
+
+@mixin var($property, $variable) {
+  #{$property}: map-get($vars, $variable);
+  #{$property}: var(--#{$variable});
+}
+
+:root {
+  @each $property, $value in $vars {
+    --#{$property}: #{$value};
+  }
+}
+
+// HTML Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+// General class
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
