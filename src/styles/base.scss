@@ -1,21 +1,21 @@
 // Set up fonts
 @font-face {
   font-family: "Montserrat";
-  src: url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.eot");
+  src: url("~@/assets/fonts/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.eot");
   // IE9
-  src: url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.eot?#iefix")
+  src: url("~@/assets/fonts/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.eot?#iefix")
       format("embedded-opentype"),
     /* IE6-IE8 */
-      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.woff2")
+      url("~@/assets/fonts/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.woff2")
       format("woff2"),
     /* chrome、firefox */
-      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.woff")
+      url("~@/assets/fonts/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.woff")
       format("woff"),
     /* chrome、firefox */
-      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.ttf")
+      url("~@/assets/fonts/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.ttf")
       format("truetype"),
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-      url("/styles/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.svg#Montserrat")
+      url("~@/assets/fonts/montserrat/5fc6f4fd75e944a52a342ab2c7f100f1.svg#Montserrat")
       format("svg");
   /* iOS 4.1- */
 }
@@ -62,6 +62,15 @@ html,
 body {
   min-height: 100%;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: v(light-primary);
+  text-decoration: none;
+
+  &:hover {
+    color: v(light-tertiary);
+  }
 }
 
 // General class

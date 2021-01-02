@@ -13,9 +13,9 @@
         <h1>Got a feedback?</h1>
         <h3>Send me an email.</h3>
         <p>
-          <a href="mailto:christofersaputra29@gmail.com"
-            >christofersaputra29@gmail.com</a
-          >
+          <a href="mailto:christofersaputra29@gmail.com">
+            <font-awesome-icon :icon="['fas', 'envelope']"/> : christofersaputra29@gmail.com
+          </a>
         </p>
       </div>
       <div class="right">
@@ -28,14 +28,26 @@
       </div>
       <div class="contact">
         <ul>
-          <li><a href="https://github.com/chromium7">G</a></li>
-          <li><a href="https://www.instagram.com/chromium_se/">I</a></li>
           <li>
-            <a href="https://www.linkedin.com/in/christofer-saputra-722b1b186/">
-              L
+            <a href="https://github.com/chromium7">
+              <font-awesome-icon :icon="['fab', 'github']" />
             </a>
           </li>
-          <li><a href="https://chromium7.github.io/chromium7/">D</a></li>
+          <li>
+            <a href="https://www.instagram.com/chromium_se/">
+              <font-awesome-icon :icon="['fab', 'instagram']" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/christofer-saputra-722b1b186/">
+              <font-awesome-icon :icon="['fab', 'linkedin']" />
+            </a>
+          </li>
+          <li>
+            <a href="https://chromium7.github.io/chromium7/">
+              <font-awesome-icon :icon="['fas', 'link']" />
+            </a>
+          </li>
         </ul>
         <p>@Chromium7 2021 - Algorithms Visualizer</p>
       </div>
@@ -68,7 +80,8 @@ footer {
   padding: 40px 5%;
 
   .left {
-    h1, h3 {
+    h1,
+    h3 {
       font-weight: 500;
     }
     p {
@@ -84,14 +97,14 @@ footer {
       list-style-type: none;
 
       li {
-        margin-bottom: .4em;
+        margin-bottom: 0.4em;
       }
     }
   }
 
   .contact {
     clear: both;
-    width: 60%;
+    width: 50%;
     margin: auto;
     text-align: center;
     border-top: 1px solid v(light-primary);
@@ -104,6 +117,7 @@ footer {
 
       li {
         color: v(light-primary);
+        font-size: 2em;
       }
     }
   }
