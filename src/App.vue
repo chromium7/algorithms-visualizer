@@ -1,10 +1,6 @@
 <template>
   <div id="app">
     <Header />
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <div class="body">
       <router-view />
       <div class="push"></div>
@@ -28,8 +24,7 @@ export default {
 
 <style lang="scss">
 .body {
-  min-height: 100%;
-  padding: 0 5%;
+  min-height: 100vh;
 
   /* Equal to height of footer */
   margin-bottom: -400px;

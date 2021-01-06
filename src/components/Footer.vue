@@ -12,10 +12,11 @@
     </div>
     <div class="right">
       <ul>
-        <li>About</li>
-        <li>Library</li>
-        <li>Source code</li>
-        <li>Resources</li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/">About</router-link></li>
+        <li><router-link to="/">Library</router-link></li>
+        <li><router-link to="/">Resources</router-link></li>
+        <li><router-link to="/">Source code</router-link></li>
       </ul>
     </div>
     <div class="contact">
@@ -48,8 +49,8 @@
 
 <script>
 export default {
-  name: "Footer"
-}
+  name: 'Footer'
+};
 </script>
 
 <style lang="scss" scoped>

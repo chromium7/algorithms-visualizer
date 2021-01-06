@@ -18,11 +18,11 @@
     </div>
     <div class="navigation" :class="{ hidden: isClosed }">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Library</li>
-        <li>Resources</li>
-        <li>Source code</li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/">About</router-link></li>
+        <li><router-link to="/">Library</router-link></li>
+        <li><router-link to="/">Resources</router-link></li>
+        <li><router-link to="/">Source code</router-link></li>
       </ul>
     </div>
     <div class="contact" :class="{ hidden: isClosed }">
@@ -78,7 +78,8 @@ ul {
 nav {
   position: fixed;
   top: 40px;
-  right: 5%;
+  right: 2.5%;
+  z-index: 100;
 }
 
 .logo {
@@ -119,6 +120,14 @@ nav {
 
     li {
       margin: 0 1em;
+
+      a {
+        color: v(dark-black);
+
+        &:hover {
+          color: v(light-tertiary);
+        }
+      }
     }
   }
 
