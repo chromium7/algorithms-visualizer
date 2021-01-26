@@ -13,10 +13,14 @@
     <div class="right">
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/">About</router-link></li>
-        <li><router-link to="/">Library</router-link></li>
-        <li><router-link to="/">Resources</router-link></li>
-        <li><router-link to="/">Source code</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/library">Library</router-link></li>
+        <li><router-link to="/resources">Resources</router-link></li>
+        <li>
+          <a href="https://github.com/chromium7/algorithms-visualizer"
+            >Source code</a
+          >
+        </li>
       </ul>
     </div>
     <div class="contact">

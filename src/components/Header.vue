@@ -19,10 +19,20 @@
     <div class="navigation" :class="{ hidden: isClosed }">
       <ul>
         <li><router-link class="brushed" to="/">Home</router-link></li>
-        <li><router-link class="brushed" to="/">About</router-link></li>
-        <li><router-link class="brushed" to="/">Library</router-link></li>
-        <li><router-link class="brushed" to="/">Resources</router-link></li>
-        <li><router-link class="brushed" to="/">Source code</router-link></li>
+        <li><router-link class="brushed" to="/about">About</router-link></li>
+        <li>
+          <router-link class="brushed" to="/library">Library</router-link>
+        </li>
+        <li>
+          <router-link class="brushed" to="/resources">Resources</router-link>
+        </li>
+        <li>
+          <a
+            class="brushed"
+            href="https://github.com/chromium7/algorithms-visualizer"
+            >Source code</a
+          >
+        </li>
       </ul>
     </div>
     <div class="contact" :class="{ hidden: isClosed }">
