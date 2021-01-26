@@ -13,7 +13,9 @@
           <div class="first">Ace your exams or interviews</div>
           <div class="second">Algorithms made fun and easy</div>
         </div>
-        <button>Browse the library</button>
+        <router-link to="#" class="button"
+          >Browse the Library &#187;</router-link
+        >
       </div>
     </div>
     <div class="description">
@@ -49,7 +51,7 @@
       <div class="line"></div>
       <h2 class="title">
         Explore
-        <span class="button">More &#187;</span>
+        <router-link to="#" class="button">More &#187;</router-link>
       </h2>
       <div class="examples">
         <section>
@@ -130,6 +132,21 @@ export default {
       margin-top: 1rem;
       font-size: 1.4rem;
       color: v(green-secondary);
+    }
+
+    .button {
+      display: block;
+      width: fit-content;
+      margin: 1em auto;
+      padding: 0.6em 2em;
+      background: v(green-primary);
+      color: v(dark-primary);
+      transition: color 0.4s ease-in-out;
+
+      &:hover {
+        background: v(dark-secondary);
+        color: v(light-tertiary);
+      }
     }
   }
 }
