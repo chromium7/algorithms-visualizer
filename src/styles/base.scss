@@ -86,3 +86,10 @@ h2 {
 .right {
   float: right;
 }
+
+.brushed {
+  background: url('~@/assets/brush.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+  padding: 10px 18px;
+}

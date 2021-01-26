@@ -18,16 +18,18 @@
     </div>
     <div class="navigation" :class="{ hidden: isClosed }">
       <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/">About</router-link></li>
-        <li><router-link to="/">Library</router-link></li>
-        <li><router-link to="/">Resources</router-link></li>
-        <li><router-link to="/">Source code</router-link></li>
+        <li><router-link class="brushed" to="/">Home</router-link></li>
+        <li><router-link class="brushed" to="/">About</router-link></li>
+        <li><router-link class="brushed" to="/">Library</router-link></li>
+        <li><router-link class="brushed" to="/">Resources</router-link></li>
+        <li><router-link class="brushed" to="/">Source code</router-link></li>
       </ul>
     </div>
     <div class="contact" :class="{ hidden: isClosed }">
-      <h4>Christofer Saputra</h4>
-      <h6>Author</h6>
+      <div class="profile">
+        <h4>Christofer Saputra</h4>
+        <h6>Author</h6>
+      </div>
       <ul>
         <li>
           <a href="https://github.com/chromium7">
@@ -119,7 +121,8 @@ nav {
     display: flex;
 
     li {
-      margin: 0 1em;
+      margin: 0 0.5em;
+      width: max-content;
 
       a {
         color: v(dark-black);
@@ -144,6 +147,12 @@ nav {
   text-align: center;
   padding-top: 1em;
   transform-origin: top center;
+
+  .profile {
+    background: white;
+    padding: 4px;
+    border-radius: 10px;
+  }
 
   ul li {
     font-size: 1.6em;
