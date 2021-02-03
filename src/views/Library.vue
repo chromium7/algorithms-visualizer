@@ -1,7 +1,7 @@
 <template>
-  <div class="about">
+  <div class="library">
     <div class="title">
-      <h1>About</h1>
+      <h1>Library</h1>
       <p>
         Here are the collections of available algorithm visualizers. To learn
         more than what is posted here, head to the resources page.
@@ -12,12 +12,12 @@
 
 <script>
 export default {
-  name: 'About'
+  name: 'Library'
 };
 </script>
 
 <style lang="scss" scoped>
-.about {
+.library {
   margin: 4em 5%;
   .title {
     color: v('dark-black');
