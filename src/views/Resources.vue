@@ -11,68 +11,25 @@
     <section>
       <h2>Books</h2>
       <div class="book-container">
-        <div class="entry">
-          <img src="@/assets/part1.jpg" alt="Algorithms Illuminated Part 1" />
-          <p>Algorithms Illuminated: The Basics</p>
-        </div>
-        <div class="entry">
-          <img src="@/assets/part2.jpg" alt="Algorithms Illuminated Part 2" />
-          <p>Algorithms Illuminated: Graph Algorithms and Data Structure</p>
-        </div>
-        <div class="entry">
-          <img src="@/assets/part3.jpg" alt="Algorithms Illuminated Part 3" />
-          <p>
-            Algorithms Illuminated: Greedy Algorithms and Dynamic Programming
-          </p>
-        </div>
-        <div class="entry">
-          <img src="@/assets/part4.jpg" alt="Algorithms Illuminated Part 4" />
-          <p>Algorithms Illuminated: Algorithms for NP-Hard Problems</p>
-        </div>
-        <div class="entry">
-          <img
-            src="@/assets/cracking.jpg"
-            alt="Cracking the coding interview"
-          />
-          <p>Cracking the Coding Interview</p>
+        <div class="entry" v-for="(book, index) in books" :key="index">
+          <img :src="book.image" :alt="book.name" />
+          <p>{{ book.name }}</p>
         </div>
       </div>
     </section>
     <section>
       <h2>Youtube</h2>
       <div class="channel-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/playlist?list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        ></iframe>
+        <div class="entry" v-for="(playlist, index) in playlists" :key="index">
+          <iframe
+            width="560"
+            height="315"
+            :src="playlist.link"
+            frameborder="0"
+            allow="encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </section>
   </div>
@@ -80,7 +37,56 @@
 
 <script>
 export default {
-  name: 'Resources'
+  name: 'Resources',
+  data: function() {
+    return {
+      books: [
+        {
+          name: 'Algorithms Illuminated: The Basics',
+          image: require('../assets/part1.jpg')
+        },
+        {
+          name: 'Algorithms Illuminated: Graph Algorithms and Data Structure',
+          image: require('../assets/part2.jpg')
+        },
+        {
+          name:
+            'Algorithms Illuminated: Greedy Algorithms and Dynamic Programming',
+          image: require('../assets/part3.jpg')
+        },
+        {
+          name: 'Algorithms Illuminated: Algorithms for NP-Hard Problems',
+          image: require('../assets/part4.jpg')
+        },
+        {
+          name: 'Cracking the Coding Interview',
+          image: require('../assets/cracking.jpg')
+        }
+      ],
+      playlists: [
+        {
+          name: 'Harvard CS50 Introduction to Computer Science',
+          link:
+            'https://www.youtube.com/embed/playlist?list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8'
+        },
+        {
+          name: 'Harvard CS50 AI Introduction to Artificial Intelligence',
+          link:
+            'https://www.youtube.com/embed/playlist?list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv'
+        },
+        {
+          name: 'MIT 6.006 Introduction to Algorithms',
+          link:
+            'https://www.youtube.com/embed/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb'
+        },
+        {
+          name: 'MIT 6.046J Design and Analysis of Algorithms',
+          link:
+            'https://www.youtube.com/embed/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp'
+        }
+      ]
+    };
+  }
 };
 </script>
 
