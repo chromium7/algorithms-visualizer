@@ -9,7 +9,7 @@
     <section>
       <h2>The Story behind Algorithms Visualizer</h2>
       <div class="content">
-        <img src="#" alt="#" />
+        <img src="@/assets/about-logo.png" alt="" />
         <p>
           I enjoy learning algorithms. I think it keeps my brain sharp and
           prepare me for future technical interviews. However, learning a new
@@ -66,6 +66,31 @@ export default {
     h1 {
       font-size: 2.6rem;
       letter-spacing: 0.15rem;
+    }
+  }
+
+  section {
+    h2 {
+      text-align: center;
+      margin-bottom: 1.6em;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-around;
+
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      img {
+        width: 40%;
+      }
+
+      p {
+        padding-top: 1em;
+        width: 40%;
+      }
     }
   }
 }

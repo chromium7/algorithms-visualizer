@@ -12,7 +12,7 @@
       <h2>Books</h2>
       <div class="book-container">
         <div class="entry" v-for="(book, index) in books" :key="index">
-          <img :src="book.image" :alt="book.name" />
+          <v-lazy-image :src="book.image" :alt="book.name" />
           <p>{{ book.name }}</p>
         </div>
       </div>
@@ -36,8 +36,13 @@
 </template>
 
 <script>
+import VLazyImage from 'v-lazy-image';
+
 export default {
   name: 'Resources',
+  components: {
+    VLazyImage
+  },
   data: function() {
     return {
       books: [
@@ -102,10 +107,6 @@ export default {
       font-size: 2.6rem;
       letter-spacing: 0.15rem;
     }
-  }
-
-  section {
-    margin: 3.6em 0 0;
   }
 
   .book-container,
