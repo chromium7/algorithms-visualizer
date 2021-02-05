@@ -33,7 +33,7 @@
     </section>
     <section>
       <h2>Development Process</h2>
-      <div class="content">
+      <div class="content reverse">
         <img src="#" alt="#" />
         <p>
           The development of this project begin with prototyping followed by
@@ -59,16 +59,6 @@ export default {
 <style lang="scss" scoped>
 .about {
   margin: 4em 5%;
-  .title {
-    color: v('dark-black');
-    max-width: 500px;
-
-    h1 {
-      font-size: 2.6rem;
-      letter-spacing: 0.15rem;
-    }
-  }
-
   section {
     h2 {
       text-align: center;
@@ -77,19 +67,20 @@ export default {
 
     .content {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
 
-      &:nth-child(odd) {
+      &.reverse {
         flex-direction: row-reverse;
       }
 
       img {
-        width: 40%;
+        width: 40vw;
       }
 
       p {
         padding-top: 1em;
-        width: 40%;
+        width: 40vw;
       }
     }
   }

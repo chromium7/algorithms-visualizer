@@ -99,16 +99,6 @@ export default {
 .resources {
   margin: 4em 5%;
 
-  .title {
-    color: v('dark-black');
-    max-width: 500px;
-
-    h1 {
-      font-size: 2.6rem;
-      letter-spacing: 0.15rem;
-    }
-  }
-
   .book-container,
   .channel-container {
     display: flex;

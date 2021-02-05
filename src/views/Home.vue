@@ -177,6 +177,7 @@ export default {
   .title {
     text-align: center;
     color: v(dark-black);
+    max-width: none;
 
     .button {
       font-size: 0.8rem;

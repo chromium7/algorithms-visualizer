@@ -28,6 +28,11 @@ const routes = [
     path: '/resources',
     name: 'Resources',
     component: () => import('../views/Resources.vue')
+  },
+  {
+    path: '/library/merge-sort',
+    name: 'MergeSort',
+    component: () => import('../views/MergeSort.vue')
   }
 ];
 
