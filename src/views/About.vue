@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="opening about">
     <div class="title">
       <h1>About Algorithms Visualizer</h1>
       <p>
@@ -58,7 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  margin: 4em 5%;
   section {
     h2 {
       text-align: center;

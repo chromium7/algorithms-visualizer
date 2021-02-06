@@ -1,5 +1,5 @@
 <template>
-  <div class="library">
+  <div class="opening library">
     <div class="title">
       <h1>Library</h1>
       <p>
@@ -33,7 +33,9 @@
       <div class="entries">
         <div class="entry" v-for="(entry, index) in divandconq" :key="index">
           <img :src="entry.thumbnail" :alt="entry.name" />
-          <p>{{ entry.name }}</p>
+          <p>
+            <router-link :to="entry.link">{{ entry.name }}</router-link>
+          </p>
         </div>
       </div>
     </section>
@@ -46,7 +48,7 @@
           it down into simpler subproblems and utilizing the fact that the
           optimal solution to the overall problem depends upon the optimal
           solution to its subproblems.
-          <br />
+          <br /><br />
           Many also describe DP as a careful brute force strategy, which try
           every possible choice while keeping in mind to not repeat the same
           operation. This technique of storing the results of already solved
@@ -56,7 +58,9 @@
       <div class="entries">
         <div class="entry" v-for="(entry, index) in dynprog" :key="index">
           <img :src="entry.thumbnail" :alt="entry.name" />
-          <p>{{ entry.name }}</p>
+          <p>
+            <router-link :to="entry.link">{{ entry.name }}</router-link>
+          </p>
         </div>
       </div>
     </section>
@@ -69,13 +73,21 @@ export default {
   data: function() {
     return {
       divandconq: [
-        { name: 'Merge Sort', thumbnail: '#', link: 'merge_sort' },
-        { name: 'Karatsuba', thumbnail: '#', link: 'karatsuba' },
+        {
+          name: 'Merge Sort',
+          thumbnail: require('@/assets/merge_sort.png'),
+          link: '/library/merge-sort'
+        },
+        {
+          name: 'Karatsuba',
+          thumbnail: require('@/assets/karatsuba.png'),
+          link: '/library/karatsuba'
+        },
         { name: 'Minimax', thumbnail: '#', link: 'minimax' }
       ],
       dynprog: [
-        { name: 'Merge Sort', thumbnail: '#', link: 'merge_sort' },
-        { name: 'Karatsuba', thumbnail: '#', link: 'merge_sort' },
+        { name: 'Fibonacci', thumbnail: '#', link: 'fibonacci' },
+        { name: 'Knapsack', thumbnail: '#', link: 'knapsack' },
         { name: 'Minimax', thumbnail: '#', link: 'merge_sort' }
       ]
     };
@@ -85,8 +97,6 @@ export default {
 
 <style lang="scss" scoped>
 .library {
-  margin: 4em 5%;
-
   section {
     h2 {
       border-bottom: 1px solid v(dark-secondary);
@@ -112,9 +122,14 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-top: 2em;
 
       .entry {
         width: 400px;
+
+        p a {
+          color: v('dark-black');
+        }
 
         img {
           width: 100%;

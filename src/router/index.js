@@ -33,6 +33,11 @@ const routes = [
     path: '/library/merge-sort',
     name: 'MergeSort',
     component: () => import('../views/MergeSort.vue')
+  },
+  {
+    path: '/library/karatsuba',
+    name: 'Karatsuba',
+    component: () => import('../views/Karatsuba.vue')
   }
 ];
 

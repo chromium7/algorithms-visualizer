@@ -1,5 +1,5 @@
 <template>
-  <div class="resources">
+  <div class="opening resources">
     <div class="title">
       <h1>Resources</h1>
       <p>
@@ -97,8 +97,6 @@ export default {
 
 <style lang="scss" scoped>
 .resources {
-  margin: 4em 5%;
-
   .book-container,
   .channel-container {
     display: flex;
