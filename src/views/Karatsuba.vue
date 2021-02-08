@@ -10,12 +10,20 @@
         multiplying to very large numbers.
       </p>
     </div>
+    <div>
+      <KaratsubaCode />
+    </div>
   </div>
 </template>
 
 <script>
+import KaratsubaCode from '@/components/KaratsubaCode.vue';
+// import KaratsubaCode from '../components/KaratsubaCode.vue';
+// import KaratsubaCode from '../components/KaratsubaCode.vue';
+
 export default {
-  name: 'Karatsuba'
+  name: 'Karatsuba',
+  components: { KaratsubaCode }
 };
 </script>
 
