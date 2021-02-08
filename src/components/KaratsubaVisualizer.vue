@@ -1,5 +1,7 @@
 <template>
-  <div class="opening"></div>
+  <div>
+    <h2>Visualization</h2>
+  </div>
 </template>
 
 <script>

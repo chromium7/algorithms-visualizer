@@ -10,7 +10,13 @@
         multiplying to very large numbers.
       </p>
     </div>
-    <div>
+    <div class="visualizer">
+      <KaratsubaVisualizer />
+    </div>
+    <div class="explanation">
+      <KaratsubaExplanation />
+    </div>
+    <div class="source-code">
       <KaratsubaCode />
     </div>
   </div>
@@ -18,12 +24,12 @@
 
 <script>
 import KaratsubaCode from '@/components/KaratsubaCode.vue';
-// import KaratsubaCode from '../components/KaratsubaCode.vue';
-// import KaratsubaCode from '../components/KaratsubaCode.vue';
+import KaratsubaVisualizer from '@/components/KaratsubaVisualizer.vue';
+import KaratsubaExplanation from '@/components/KaratsubaExplanation.vue';
 
 export default {
   name: 'Karatsuba',
-  components: { KaratsubaCode }
+  components: { KaratsubaCode, KaratsubaVisualizer, KaratsubaExplanation }
 };
 </script>
 
